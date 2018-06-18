@@ -1,0 +1,78 @@
+.sidebar, .content, .header {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px 20px !important;
+}
+
+.header {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.column.postBox {
+    width: 90%;
+    margin: 5%;
+    line-height: 28px;
+    background: #f3f3f3;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.column.postBox .postTitle {
+    font-weight: 700;
+}
+
+.column.postBox .postBody {
+
+}
+
+.column.widget {
+    width: 90%;
+    margin: 5%;
+    line-height: 28px;
+    background: #f3f3f3;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.column.widget .wgtTitle {
+    font-weight: 700;
+}
+
+.column.widget .wgtBody {
+
+}
+
+.row .column.column-offset-3 {
+    margin-right: 3%
+}
+
+.centerBox {
+    width: 40%;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 100px auto;
+    background: #fff;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+}
+
+.centerBox.error {
+    background: #fde0e0;
+}
+
+.centerBox.success {
+    background: #e0fde0;
+}
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+}
