@@ -1,13 +1,17 @@
 <?php
 include_once "config.php";
-if($_SERVER["REQUEST_METHOD"] == "GET" and $_GET['action'] == 'logout') {
+$errorMsg = [];
+
+if ($_SERVER["REQUEST_METHOD"] == "get" and $_GET['action'] == 'logout') {
     logout();
 }
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    login($_POST['email'],$_POST['password']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!empty($_POST['email']) and !empty($_POST['password'])) {
+        // if not error
+        $res = login($_POST['email'], $_POST['password']);
+    }
 }
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,6 +25,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
 <div class="continer">
+    <?php if ($_SERVER["REQUEST_METHOD"] == "POST"): ?>
+        <div class="centerBox error">
+            <?php if ($res == -1): ?>
+                ایمیل و یا رمز عبور خود را اشتباه وارد کرده اید.
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
     <div class="centerBox">
         <h3>ورود به سایت</h3>
         <form action="login.php" method="post">
